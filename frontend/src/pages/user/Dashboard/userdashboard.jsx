@@ -187,11 +187,11 @@ export default function UserDashboard() {
 
     // Get productivity message based on completion rate
     const getProductivityMessage = () => {
-        if (stats.completionRate >= 80) return "Outstanding productivity! 🌟";
-        if (stats.completionRate >= 60) return "Great progress! Keep it up! 💪";
-        if (stats.completionRate >= 40) return "You're on the right track! 🎯";
-        if (stats.completionRate >= 20) return "Small steps lead to big achievements! 🌱";
-        return "Let's start achieving those goals! 🚀";
+        if (stats.completionRate >= 80) return "Outstanding productivity! ";
+        if (stats.completionRate >= 60) return "Great progress! Keep it up! ";
+        if (stats.completionRate >= 40) return "You're on the right track! ";
+        if (stats.completionRate >= 20) return "Small steps lead to big achievements! ";
+        return "Let's start achieving those goals! ";
     };
 
     // Get greeting based on time of day
@@ -208,22 +208,22 @@ export default function UserDashboard() {
         const hour = new Date().getHours();
         if (hour < 12) {
             return stats.pendingTasks > 0 
-                ? "Start your day strong! 🌅" 
-                : "Perfect morning start! ☀️";
+                ? "Start your day strong! " 
+                : "Perfect morning start! ";
         }
         if (hour < 17) {
             return stats.pendingTasks > 0 
-                ? "Keep the momentum going! 💪" 
-                : "Fantastic progress today! 🌟";
+                ? "Keep the momentum going! " 
+                : "Fantastic progress today! ";
         }
         if (hour < 21) {
             return stats.pendingTasks > 0 
-                ? "There's still time to achieve more! 🌙" 
-                : "What a productive day! 🌆";
+                ? "There's still time to achieve more! " 
+                : "What a productive day! ";
         }
         return stats.pendingTasks > 0 
-            ? "Wrap up your day with a final push! ✨" 
-            : "Rest well, champion! 🌙";
+            ? "Wrap up your day with a final push! " 
+            : "Rest well, champion! ";
     };
 
     // Particles initialization
@@ -415,8 +415,8 @@ export default function UserDashboard() {
                                 <div className="pt-2 border-t border-gray-100">
                                     <p className="text-sm text-gray-500 leading-relaxed">
                                         {stats.pendingTasks === 0 
-                                            ? "Incredible! You've completed all your tasks! Time to set new goals and keep the momentum going! 🎉" 
-                                            : `You're just ${stats.pendingTasks} task${stats.pendingTasks === 1 ? '' : 's'} away from achieving all your goals! Keep pushing forward! 💪`
+                                            ? "Incredible! You've completed all your tasks! Time to set new goals and keep the momentum going! " 
+                                            : `You're just ${stats.pendingTasks} task${stats.pendingTasks === 1 ? '' : 's'} away from achieving all your goals! Keep pushing forward! `
                                         }
                                     </p>
                                 </div>
@@ -642,11 +642,11 @@ export default function UserDashboard() {
                         bg-white/90 px-8 py-4 rounded-full shadow-lg border border-green-200
                         animate-bounce flex items-center gap-3 transition-all duration-500 ease-in-out"
                 >
-                    <span className="text-4xl animate-spin-slow">🎉</span>
+                    <span className="text-4xl animate-spin-slow"></span>
                     <p className="text-xl font-bold bg-gradient-to-r from-green-500 to-blue-500 bg-clip-text text-transparent">
                         Incredible! All Tasks Completed! 
                     </p>
-                    <span className="text-4xl animate-pulse">🏆</span>
+                    <span className="text-4xl animate-pulse"></span>
                 </div>
             )}
         </div>

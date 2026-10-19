@@ -40,7 +40,7 @@ export function AddTodo() {
         e.preventDefault();
         setIsLoading(true);
         const loadingToast = toast.loading('Adding new task...', {
-            icon: '🚀'
+            icon: ''
         });
 
         try {
@@ -71,7 +71,7 @@ export function AddTodo() {
                     Time: new Date().toISOString()
                 }]);
                 
-                toast.success(`"${title}" added successfully! 🎯`, {
+                toast.success(`"${title}" added successfully! `, {
                     id: loadingToast,
                     duration: 3000,
                     position: 'top-right',
@@ -89,13 +89,13 @@ export function AddTodo() {
             } else {
                 toast.error(data.msg || 'Failed to add task', { 
                     id: loadingToast,
-                    icon: '❌'
+                    icon: ''
                 });
             }
         } catch (error) {
             toast.error('Network error. Please try again.', { 
                 id: loadingToast,
-                icon: '⚠️'
+                icon: ''
             });
         } finally {
             setIsLoading(false);
@@ -116,7 +116,7 @@ export function AddTodo() {
                 <div>
                     <input
                         type="text"
-                        placeholder="What's on your mind for today? 🎯"
+                        placeholder="What's on your mind for today? "
                         value={title}
                         onChange={handleTitleChange}
                         onKeyPress={handleKeyPress}
@@ -125,7 +125,7 @@ export function AddTodo() {
                 </div>
                 <div>
                     <textarea
-                        placeholder="Add some details to help you achieve this goal ✨"
+                        placeholder="Add some details to help you achieve this goal "
                         value={description}
                         onChange={handleDescriptionChange}
                         onKeyPress={handleKeyPress}

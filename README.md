@@ -1468,7 +1468,7 @@ sequenceDiagram
 ```javascript
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://srecharandesu:***REMOVED***@cluster0.a9berin.mongodb.net/taskmaster');
+mongoose.connect(process.env.MONGODB_URI);
 ```
 
 This code snippet demonstrates how to establish a connection to the MongoDB Atlas cluster using the provided connection string.  It's crucial that the connection string is properly configured with the correct username, password, and database name.
